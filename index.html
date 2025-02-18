@@ -22,11 +22,32 @@
         .coming-soon-image {
             width: 100%;
             height: auto;
+            max-height: 100vh;
+            object-fit: contain;
             display: block;
+        }
+
+        @media (orientation: portrait) {
+            .coming-soon-image.desktop {
+                display: none;
+            }
+            .coming-soon-image.mobile {
+                display: block;
+            }
+        }
+
+        @media (orientation: landscape) {
+            .coming-soon-image.desktop {
+                display: block;
+            }
+            .coming-soon-image.mobile {
+                display: none;
+            }
         }
     </style>
 </head>
 <body>
-    <img src="assets/TheGoodBlend-comingsoon.svg" alt="The Good Blend - Coming Soon" class="coming-soon-image">
+    <img src="assets/TheGoodBlend-comingsoon.svg" alt="The Good Blend - Coming Soon" class="coming-soon-image desktop">
+    <img src="assets/TheGoodBlend-comingsoon-mobile.svg" alt="The Good Blend - Coming Soon" class="coming-soon-image mobile">
 </body>
 </html>
